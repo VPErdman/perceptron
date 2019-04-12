@@ -31,10 +31,11 @@ def sigmoid_derivative(x):
 class NeuralNetwork:
     def __init__(self, x, y):
         self.input = x
-        # weight - связи
-        # We model a single neuron, with 4 input connections and 1 output connection.
+        # To initialize the weights (connections) as a NumPy array with random values:
+        # Creating an array of variable dimensions, depending on the size of our input
+        # (for the dimensions of the first weight array)
         self.weights1 = np.random.rand(self.input.shape[1], 4)
-        # initializing our Synapses
+        # We model a single neuron, with 4 input connections and 1 output connection.
         self.weights2 = np.random.rand(4, 1)
         self.y = y
         self.output = np.zeros(self.y.shape)
